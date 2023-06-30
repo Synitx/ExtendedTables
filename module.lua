@@ -34,15 +34,7 @@ core.filter = function(tbl:{any},callback:(any,any,{})->())
 			result[i] = v
 		end
 	end
-	if (#result > 1)  then
-		return result
-	else
-		local result2 = {}
-		for i,v in pairs(result) do
-			table.insert(result2,v)
-		end
-		return result2[1]
-	end
+	return result
 end
 
 core.map = function(tbl:{any},callback:(any,any,{})->())
