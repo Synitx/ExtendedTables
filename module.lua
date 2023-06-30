@@ -136,7 +136,7 @@ core.slice = function(tbl:{any},startIndex:number?,endIndex:number?)
 	if endIndex < 0 then
 		endIndex = #tbl + endIndex + 1
 	end
-	return table.unpack(tbl, startIndex, endIndex)
+	return {table.unpack(tbl, startIndex, endIndex)}
 end
 
 core.flat = function(tbl:{any})
