@@ -31,7 +31,7 @@ core.filter = function(tbl:{any},callback:(any,any,{})->())
 	local result = {}
 	for i,v in pairs(tbl) do
 		if callback(v,i,tbl) then
-			result[i] = v
+			table.insert(result,v)
 		end
 	end
 	return result
